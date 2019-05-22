@@ -35,4 +35,26 @@ class Cult
     self.all.select {|cult| cult.founded == year}
   end
 
-end
+  def average_age
+    people = self.followers
+    person = people.map {|person| person.follower.age}
+    total = person.inject {|sum, x| sum + x}
+    average = total / person.size
+    average.to_f
+  end
+
+  def my_followers_mottos
+    people = self.followers
+    mottos = people.map {|person| person.follower.life_motto}
+    mottos
+  end
+
+  def self.most_common_location
+    new_hash = Hash.new(0)
+    BloodOath.all.each do |x|
+      new_hash[x.cult_name] += 1
+      end
+      new_hash.max_by {|k,v| v}[0]
+    end
+
+  end

@@ -9,7 +9,7 @@ end
 
 ###### Cults ######
 cat_cult = Cult.new("Cat Cult", "New York", 1996, "People are temporary. Cats are forever")
-dog_cult = Cult.new("Dog Cult", "Sydney", 1996, "All hail the supreme puppers!")
+dog_cult = Cult.new("Dog Cult", "New York", 1996, "All hail the supreme puppers!")
 aliens = Cult.new("Alien Cult", "California", 1960, "They exist.")
 
 ###### Followers ######
